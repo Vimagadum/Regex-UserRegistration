@@ -3,9 +3,12 @@ using UserRegistration;
 
 Console.WriteLine("Hello, World!");
 ValidUserRegistraton validUserRegistraton = new ValidUserRegistraton();
-Console.WriteLine("Enter valid first name");
-string frstname = Console.ReadLine();
-validUserRegistraton.ValidateFName(frstname);
-Console.WriteLine("Enter valid last name");
-string lstname = Console.ReadLine();
-validUserRegistraton.ValidateLName(lstname);
+//Console.WriteLine("Enter valid first name");
+//string frstname = Console.ReadLine();
+//validUserRegistraton.ValidateFName(frstname);
+//Console.WriteLine("Enter valid last name");
+//string lstname = Console.ReadLine();
+//validUserRegistraton.ValidateLName(lstname);
+Console.WriteLine("Enter valid EmailId");
+string mail = Console.ReadLine();
+validUserRegistraton.ValidateEmail(mail);

@@ -12,6 +12,8 @@ namespace UserRegistration
         //declaring pattern
         public const string FIRST_NAME = "^[A-Z][a-zA-Z]{2}";
         public const string LAST_NAME = "^[A-Z][a-zA-Z]{2}";
+        public const string EMAIL = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
+
 
         public void ValidateFName(string fName)
         {
@@ -39,6 +41,20 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("last name does not match with pattern");
+            }
+        }
+        public void ValidateEmail(string emailId)
+        {
+            //assigning pattern in regex constructor
+            Regex regex = new Regex(EMAIL);
+
+            if (regex.IsMatch(emailId))
+            {
+                Console.WriteLine("Email is matched with pattern");
+            }
+            else
+            {
+                Console.WriteLine("email does not match with pattern");
             }
         }
     }
