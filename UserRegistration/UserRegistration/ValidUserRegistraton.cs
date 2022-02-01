@@ -17,6 +17,7 @@ namespace UserRegistration
         public const string PASSWORD_RULE1= "^[a-z]{8}";
         public const string PASSWORD_RULE2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
         public const string PASSWORD_RULE3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+        public const string PASSWORD_RULE4 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}$";
 
         //method to check first name is valid or not
         public void ValidateFName(string fName)
@@ -115,6 +116,21 @@ namespace UserRegistration
             Regex regex = new Regex(PASSWORD_RULE3);
 
             if (regex.IsMatch(psswrd3))
+            {
+                Console.WriteLine("PassWord is matched with pattern");
+            }
+            else
+            {
+                Console.WriteLine("PassWord does not match with pattern");
+            }
+        }
+        //method to check passwrd is valid or not. it should be contain at least one uppercase and one number and one special character 
+        public void ValidatePassword4(string psswrd4)
+        {
+            //assigning pattern in regex constructor
+            Regex regex = new Regex(PASSWORD_RULE4);
+
+            if (regex.IsMatch(psswrd4))
             {
                 Console.WriteLine("PassWord is matched with pattern");
             }
