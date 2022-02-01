@@ -19,6 +19,13 @@ namespace UserRegistration
         public const string PASSWORD_RULE3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
         public const string PASSWORD_RULE4 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}$";
 
+        //declaring Array
+       public string[] sample = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc-100@abc.net", "abc.100@abc.com.au",
+                 "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" ,"abc","abc@.com","abc123@gmail.a", "abc123@.com" ,
+                 "abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a"};
+
+
+
         //method to check first name is valid or not
         public void ValidateFName(string fName)
         {
@@ -138,6 +145,24 @@ namespace UserRegistration
             {
                 Console.WriteLine("PassWord does not match with pattern");
             }
+        }
+        //method to check sample emails are valid or invalid 
+        public void ValidateSample()
+        {
+            //assigning pattern in regex constructor
+            Regex regex = new Regex(EMAIL);
+            for(int i = 0; i < sample.Length; i++)
+            {
+                if(regex.IsMatch(sample[i]))
+                {
+                    Console.WriteLine(sample[i]+" Is Valid");
+                }
+                else
+                {
+                    Console.WriteLine(sample[i]+" is Invalid");
+                }
+            }
+           
         }
     }
 }
