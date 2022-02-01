@@ -12,7 +12,10 @@ ValidUserRegistraton validUserRegistraton = new ValidUserRegistraton();
 //Console.WriteLine("Enter valid EmailId");
 //string mail = Console.ReadLine();
 //validUserRegistraton.ValidateEmail(mail);
-Console.WriteLine("Enter mobile number");
-string mnum = Console.ReadLine();
-validUserRegistraton.ValidateMobile(mnum);
+//Console.WriteLine("Enter mobile number");
+//string mnum = Console.ReadLine();
+//validUserRegistraton.ValidateMobile(mnum);
+Console.WriteLine("Enter password");
+string psswrd = Console.ReadLine();
+validUserRegistraton.ValidatePassword(psswrd);
 
