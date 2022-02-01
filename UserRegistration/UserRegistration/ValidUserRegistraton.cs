@@ -13,8 +13,9 @@ namespace UserRegistration
         public const string FIRST_NAME = "^[A-Z][a-zA-Z]{2}";
         public const string LAST_NAME = "^[A-Z][a-zA-Z]{2}";
         public const string EMAIL = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
+        public const string MOBILE = "^([9][1])+[ ]+[6789]{1}[0-9]{9}$";
 
-
+         //method to check first name is valid or not
         public void ValidateFName(string fName)
         {
             //assigning pattern in regex constructor
@@ -29,6 +30,7 @@ namespace UserRegistration
                 Console.WriteLine("first name does not match with pattern");
             }
         }
+        //method to check last is valid or not
         public void ValidateLName(string lName)
         {
             //assigning pattern in regex constructor
@@ -43,6 +45,7 @@ namespace UserRegistration
                 Console.WriteLine("last name does not match with pattern");
             }
         }
+        //method to check email is valid or not
         public void ValidateEmail(string emailId)
         {
             //assigning pattern in regex constructor
@@ -55,6 +58,21 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("email does not match with pattern");
+            }
+        }
+        //method to check mbile number is valid or not 
+        public void ValidateMobile(string mnum)
+        {
+            //assigning pattern in regex constructor
+            Regex regex = new Regex(MOBILE);
+
+            if (regex.IsMatch(mnum))
+            {
+                Console.WriteLine("Mobile Number is matched with pattern");
+            }
+            else
+            {
+                Console.WriteLine("Mobile Number does not match with pattern");
             }
         }
     }
