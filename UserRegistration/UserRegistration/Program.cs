@@ -18,7 +18,10 @@ ValidUserRegistraton validUserRegistraton = new ValidUserRegistraton();
 //Console.WriteLine("Enter password");
 //string psswrd = Console.ReadLine();
 //validUserRegistraton.ValidatePassword(psswrd);
-Console.WriteLine("Enter password with at least one upper case");
-string psswrd2 = Console.ReadLine();
-validUserRegistraton.ValidatePassword2(psswrd2);
+//Console.WriteLine("Enter password with at least one upper case");
+//string psswrd2 = Console.ReadLine();
+//validUserRegistraton.ValidatePassword2(psswrd2);
+Console.WriteLine("Enter password with at least one upper case and at least one number");
+string psswrd3 = Console.ReadLine();
+validUserRegistraton.ValidatePassword2(psswrd3);
 
